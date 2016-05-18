@@ -1,0 +1,36 @@
+#about {
+    &:before {
+        animation: toptopright 12s linear 0s infinite normal;
+        background: url("/build/images/grey-noise.png");
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    &:after {
+        background: url("/build/images/christ.png") 170% 100% no-repeat fixed;
+        background-size: 90%;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .about-content {
+        left: 5%;
+        position: absolute;
+        z-index: 3;
+    }
+}
+.about-content {
+    p {
+        width: 45%;
+        span {
+            font-family: $medium-font;
+            font-size: 20px;
+        }
+    }
+}

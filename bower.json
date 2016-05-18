@@ -1,0 +1,25 @@
+{
+  "name": "church",
+  "description": "Website template",
+  "main": "app.js",
+  "authors": [
+    "ess_ess"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "scrollmagic": "^2.0.5",
+    "d-calendar": "^1.5.1",
+    "lightgallery": "^1.2.18"
+  }
+}

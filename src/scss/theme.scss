@@ -1,0 +1,263 @@
+@import 'partials/declarations';
+@import 'partials/normalize';
+
+//Overrides
+html {
+    box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+}
+ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+a {
+    text-decoration: none;
+    &:link, &:hover, &:visited, &:focus {
+        text-decoration: none;
+    }
+}
+p {
+    font-family: $light-font;
+    font-size: 20px;
+    line-height: 2em;
+}
+
+//Animation
+
+@-webkit-keyframes topbottomleft {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -120px 120px
+    }
+}
+
+@-moz-keyframes topbottomleft {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -120px 120px
+    }
+}
+
+@-ms-keyframes topbottomleft {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -120px 120px
+    }
+}
+
+@-o-keyframes topbottomleft {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -120px 120px
+    }
+}
+
+@keyframes topbottomleft {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -120px 120px
+    }
+}
+
+@-webkit-keyframes toptopright {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: 120px -120px
+    }
+}
+
+@-moz-keyframes toptopright {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: 120px -120px
+    }
+}
+
+@-ms-keyframes toptopright {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: 120px -120px
+    }
+}
+
+@-o-keyframes toptopright {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: 120px -120px
+    }
+}
+
+@keyframes toptopright {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: 120px -120px
+    }
+}
+
+//Custom theme
+.icon-menu:before {
+    content: '\e800';
+}
+.church-section {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    max-height: 900px;
+    padding-top: 30px;
+    position: relative;
+    width: 100%;
+    .content-wrap {
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 90%;
+    } 
+    h2 {
+        font-family: $bold-font;
+        font-size: 48px;
+    }
+    &:nth-child(2n) {
+        background-color: #EAEAEA;
+        h2 {
+            color: #118964;
+        }
+    }
+    &:nth-child(2n+1) {
+        animation: topbottomleft 12s linear 0s infinite normal;
+        background: url("/build/images/svetle_modra.jpg") fixed;
+        h2 {
+            color: #1d658f;
+            text-align: right;
+        }
+    }
+}
+.fade-out {
+    transform: translateX(-1000px);
+}
+#stylish-nav {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: calc(50% - 82px);
+    width: 50px;
+    li {
+        border-radius: 10px;
+        cursor: pointer;
+        display: block;
+        background-color: white;
+        height: 10px;
+        margin-top: 20px;
+        opacity: .7;
+        position: relative;
+        width: 10px;
+        transition: all 1s ease;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
+}
+.highlight {
+    color: #39C49A;
+}
+.card {
+    background: white;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px #aaa;
+    box-shadow: 0 1px 2px #aaa;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 1rem 1rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    img {
+        transition: all 1s ease;
+        width: 100%;
+    }
+    figcaption {
+        font-family: $medium-font;
+        font-size: 20px;
+        position: absolute;
+        text-align: center;
+    }
+    // user-select: none;
+    // animation: fly-in-from-left .5s 1s ease both;
+    // transform-origin: top left;
+}
+.img-card {
+    transition: all 1s ease;
+    figure {
+        &:after {
+            background-image: linear-gradient(135deg, #292484, #DC4225);
+            bottom: 0;
+            content: "";
+            left: 0;
+            opacity: .4;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: all 1s ease;
+        }
+        figcaption {
+            bottom: -100%;
+            color: white;
+            text-align: center;
+            width: 100%;
+            z-index: 1;
+            transition: all 1s ease;
+        }
+    }
+    &:hover {
+        -webkit-box-shadow: 2px 1px 3px #aaa;
+        box-shadow: 2px 1px 3px #aaa;
+        figure {
+            &:after {
+                opacity: .7;
+            }
+        }
+        figcaption {
+            bottom: 20%;
+        }
+    }
+}
+.col-40 {
+    display: inline-block;
+    width: 39%;
+}
+.col-30 {
+    display: inline-block;
+    width: 33%;
+}

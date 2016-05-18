@@ -1,0 +1,39 @@
+.ipad {
+    display: inline-block;
+    height: 400px;
+    position: relative;
+    width: 600px;
+    &:before {
+        background: url('/build/images/ipad-air-horizontal.png') no-repeat center;
+        background-size: contain;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    iframe {
+        border: 0;
+        left: 70px;
+        position: absolute;
+        top: 28px;
+    }
+}
+.map-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 80px;
+}
+.contact-address {
+    display: inline-block;
+    padding-right: 40px;
+    padding-top: 160px;
+    text-align: right;
+}
+address {
+    p {
+        font-size: 15px;
+        line-height: 1em;
+    }
+}

@@ -1,0 +1,54 @@
+//Specific styles for landing page and nav bar
+#landing-page {
+    display: inline-block;
+    width: 100%;
+}
+.landing-img {
+    background: url("/build/images/church.jpg") no-repeat top fixed;
+    background-size: cover;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+.welcome-text {
+    left: 5%;
+    position: absolute;
+    top: 20%;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);;
+    h1 {
+        color: white;
+        font-family: $bold-font;
+        font-size: 60px;
+        margin: 0;
+    }
+}
+.bible-quote {
+    color: white;
+    left: 5%;
+    margin: 0;
+    position: absolute;
+    top: 43%;
+    width: 400px;
+    p {
+        font-size: 20px;
+        &:after {
+            content: close-quote;
+            font-size: 20px;
+        }
+        &:before {
+            content: open-quote;
+            font-size: 20px;
+        }
+    }
+    cite {
+        font-family: $light-font;
+        font-size: 18px;
+    }
+}
+@media (min-width: 2000px) {
+    .landing-img {
+        background: url("/build/images/church.jpg") no-repeat top;
+    }
+}

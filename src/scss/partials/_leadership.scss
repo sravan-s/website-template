@@ -1,0 +1,58 @@
+#leadership {
+    animation: toptopright 12s linear 0s infinite normal;
+    background: #EAEAEA url("/build/images/svetla.jpg") fixed;
+    height: 800px;
+    .card-wrap {
+        display: flex;
+        flex-direction: row;
+        margin-top: 80px;
+        position: relative;
+        width: 70%;
+    }
+    .card {
+        transition: all .5s cubic-bezier(0, 0, 1,-0.03); //For animation
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    .col-30 {
+        z-index: 1;
+        .card {
+            height: 180px;
+            opacity: 0;
+            // transform: translateX(100%);
+        }
+        .card.cards-animate {
+            margin-bottom: 30px;
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+}
+.card-wrap {
+    background-color: #f4f4f4;
+    border-radius: 14px;
+    padding-left: 14px;
+    padding-top: 30px;
+    padding-right: 10px;
+    .col-30:nth-child(1) {
+        .card {
+            transform: translateX(-100%);
+        }
+    }
+    .col-30:nth-child(2) {
+        .card:nth-child(1) {
+            transform: translateY(-100%);
+        }
+        .card:nth-child(2) {
+            transform: translateY(100%);
+        }
+    }
+    .col-30:nth-child(3) {
+        .card {
+            transform: translateX(100%);
+        }
+    }
+}
